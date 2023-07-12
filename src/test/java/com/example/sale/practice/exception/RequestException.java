@@ -1,9 +1,11 @@
 package com.example.sale.practice.exception;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import org.springframework.http.HttpStatus;
 
 @Data
+@EqualsAndHashCode(callSuper = false)
 public class RequestException extends RuntimeException {
     private String code;
     private HttpStatus status;
