@@ -22,9 +22,5 @@ public class ProviderDTO {
     @NotBlank
     private String address;
 
-    private Date createdAt;
-
-    private LocalDateTime updatedAt;
-
-    private Set<ProductDTO> listProduct;
+    // private Set<ProductDTO> listProduct;
 }

@@ -15,6 +15,4 @@ public class ProductDTO {
     private String description;
     private Double price;
     private ProviderDTO provider;
-    private Date createdAt;
-    private LocalDateTime updatedAt;
 }

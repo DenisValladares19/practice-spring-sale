@@ -26,14 +26,6 @@ public class Product {
     @Column
     private Double price;
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "id_provider")
     private Provider provider;
-
-    @Column(name = "created_at", nullable = false, updatable = false)
-    @CreatedDate
-    private Date createdAt;
-
-    @Column(name = "updated_at", nullable = false)
-    @UpdateTimestamp
-    private LocalDateTime updatedAt;
 }

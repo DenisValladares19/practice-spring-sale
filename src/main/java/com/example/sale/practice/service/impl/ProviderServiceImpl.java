@@ -7,11 +7,12 @@ import com.example.sale.practice.repository.ProviderRepository;
 import com.example.sale.practice.service.ProviderService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 public class ProviderServiceImpl  implements ProviderService {
     @Autowired
     private ProviderRepository providerRepository;
