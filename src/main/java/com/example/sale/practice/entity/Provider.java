@@ -8,6 +8,7 @@ import org.springframework.data.annotation.CreatedDate;
 import java.io.Serializable;
 import java.sql.Date;
 import java.time.LocalDateTime;
+import java.util.Objects;
 import java.util.Set;
 
 @Entity
@@ -32,4 +33,17 @@ public class Provider implements Serializable {
             mappedBy = "provider"
     )
     private Set<Product> listProduct;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Provider provider = (Provider) o;
+        return Objects.equals(id, provider.id) && Objects.equals(name, provider.name) && Objects.equals(address, provider.address) && Objects.equals(listProduct, provider.listProduct);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, address, listProduct);
+    }
 }
