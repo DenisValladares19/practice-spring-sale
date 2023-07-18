@@ -1,5 +1,7 @@
 package com.example.sale.practice.dto;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,10 +16,17 @@ import java.util.Objects;
 @NoArgsConstructor
 public class ClientDTO {
     private Long id;
+    @NotNull
+    @NotBlank
     private String name;
+    @NotNull
+    @NotBlank
     private String lastname;
+    @NotNull
     private Integer age;
+    @NotNull
     private Date birthDay;
+    @NotNull
     private UserDTO user;
 
     @Override

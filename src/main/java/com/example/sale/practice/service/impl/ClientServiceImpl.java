@@ -46,7 +46,7 @@ public class ClientServiceImpl  implements ClientService {
         client.setBirthDay(dto.getBirthDay());
 
         clientRepository.save(client);
-        
+
         return modelMapper.map(client, ClientDTO.class);
     }
 
