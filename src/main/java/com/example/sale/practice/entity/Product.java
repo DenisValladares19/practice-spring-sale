@@ -29,6 +29,9 @@ public class Product {
     @JoinColumn(name = "id_provider")
     private Provider provider;
 
+    @Column
+    private String image;
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

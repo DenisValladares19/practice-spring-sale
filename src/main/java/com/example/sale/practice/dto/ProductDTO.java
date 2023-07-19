@@ -26,4 +26,8 @@ public class ProductDTO {
 
     @NotNull
     private ProviderDTO provider;
+
+    @NotNull
+    @NotBlank
+    private String image;
 }
