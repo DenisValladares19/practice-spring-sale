@@ -24,6 +24,12 @@ public class ClientServiceImpl  implements ClientService {
 
     @Override
     public ClientDTO create(ClientDTO dto) {
+        Long exists = userRepository.countByEmail(dto.getUser().getEmail());
+
+        if (exists > 0) {
+            throw new RequestException("Email is already in use");
+        }
+
         User user = new User();
         user.setEmail(dto.getUser().getEmail());
         user.setPassword(dto.getUser().getPassword());
